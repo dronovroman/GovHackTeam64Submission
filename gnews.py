@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+News glugin based on https://newsapi.org/
 Google search - canberra times
 Created on Sat Sep  8 00:42:27 2018
 
