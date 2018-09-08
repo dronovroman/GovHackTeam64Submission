@@ -1,0 +1,35 @@
+{% extends "layout.html" %}{% block content %}
+
+<div class="container">
+
+<div class="row justify-content-md-center">
+    <div class="col col-lg-8">    
+<div class="jumbotron"> <!--Jumbotron start-->
+  <h1 class="display-3"><span class=MsoNormal style='font-size:80.0pt;mso-bidi-font-size:11.0pt;
+  font-family:Mistral;mso-fareast-font-family:"Times New Roman"'>searchify.me<u1:p></u1:p></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span>
+  </h1>
+  <p>data search with context made easy...</p>
+</div>  <!--Jumbotron end -->
+
+<form class="form-control" action="{{ url_for('start_job') }}" method="post">
+
+
+				<div class="form-control">
+					<input class="form-control" type="text" name="keyw" placeholder="Type your keyword here...">
+				</div>
+				<div class="form-control">
+					<button class="btn btn-primary btn-lg btn-block">
+						<span>
+							Let's find some data!
+						</span>
+					</button>
+				</div>
+			</form>
+
+
+</div>
+</div>
+</div>
+
+{% endblock %}

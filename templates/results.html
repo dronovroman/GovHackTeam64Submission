@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/custom.css">
+    <title>Search data the better way | Home</title>
+    <style> textarea:hover, select:hover, input:hover, .input:focus { border-color: rgba(126, 239, 104, 0.8); background-color: rgba(233,236,239,0.8); box-shadow: 0 3px 3px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6); outline: 0 none; } </style>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:['wordtree']});
+      google.charts.setOnLoadCallback(drawSimpleNodeChart);
+      function drawSimpleNodeChart() {
+      
+        var data_t = google.visualization.arrayToDataTable(
+          [ ['Phrases'],
+['{{tweeter_feed}}']
+          ]
+        );
+
+        var options_t = {
+          wordtree: {
+            format: 'implicit',
+            type: 'double',
+            word: '{{key_wd}}',
+	    colors: ['red', 'black', 'green']
+          }
+        };
+
+
+        var data_g = google.visualization.arrayToDataTable(
+          [ ['Phrases'],
+['{{google_feed}}']
+          ]
+        );
+
+        var options_g = {
+          wordtree: {
+            format: 'implicit',
+            type: 'double',
+            word: '{{key_wd}}',
+	    colors: ['red', 'black', 'green']
+          }
+        };
+
+        var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_twitter'));
+        wordtree.draw(data_t, options_t);
+        
+        var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_google'));
+        wordtree.draw(data_g, options_g);
+      }
+    </script>
+  </head>
+  <body>
+
+
+<div class="container">
+<div class="row justify-content-md-center">
+    <div class="col col-lg-8">    
+<div class="jumbotron"> <!--Jumbotron start-->
+  <h1 class="display-3"><span class=MsoNormal style='font-size:80.0pt;mso-bidi-font-size:11.0pt;
+  font-family:Mistral;mso-fareast-font-family:"Times New Roman"'>searchify.me<u1:p></u1:p></span><span
+  style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span>
+  </h1>
+  <p>data search with context made easy...</p>
+</div>  <!--Jumbotron end -->
+</div>
+</div>
+</div>
+  
+  
+  <div class="container">
+  <div class="row">
+    <div class="col" align="center"><b>Live Twitter wordscape</b></div>
+    <div class="col" align="center"><b>Live Google News wordscape</b></div>
+    <div class="w-100"></div>
+    <div id="wordtree_twitter" style="width: 600px; height: 400px;" class="col"></div>
+    <div id="wordtree_google" style="width: 600px; height: 400px;" class="col"></div>
+  </div>
+</div>
+  
+  
+  <div class="container">
+
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      2 of 3
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</div>
+  
+
+    
+    
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+  </body>
+  <footer class="mainfooter" role="contentinfo">
+    
+          <!--Footer Bottom-->
+          <div class="row justify-content-center"> <p> </p>
+        </div>
+     
+</footer>
+</html>

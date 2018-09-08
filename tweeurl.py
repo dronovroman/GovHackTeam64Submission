@@ -16,7 +16,7 @@ import time
 
 ############################################################################
 
-keywords = ['cancer','flu', 'headache']
+keywords = ['cancer','hay%20fever']
 suburbs = ['Adelaide', 'Canberra', 'Brisbane', 'Sydney', 'Perth']
 
 ############################################################################
@@ -26,21 +26,20 @@ browser = Browser()
 
 for keyword in keywords:
     for sub in suburbs:
-        url="https://twitter.com/search?l=&q="+keyword+"%20near%3A%22"+sub+"%22%20within%3A5mi&src=typd&lang=en"
-        print(url)
-        browser.visit(url)
-        time.sleep(3)
-        soup = BeautifulSoup(browser.html, 'lxml')    
-        feeds=soup.find('ol', attrs={'class': 'stream-items js-navigable-stream'})    
         try:
+            url="https://twitter.com/search?l=&q="+keyword+"%20near%3A%22"+sub+"%22%20within%3A5mi&src=typd&lang=en"
+            print(url)
+            browser.visit(url)
+            time.sleep(3)
+            soup = BeautifulSoup(browser.html, 'lxml')    
+            feeds=soup.find('ol', attrs={'class': 'stream-items js-navigable-stream'})    
             tweets = feeds.find_all('li')    
             texts= feeds.find_all('p', attrs={'class':'TweetTextSize js-tweet-text tweet-text'})    
+            tt=[]
+            with open("sub+".txt", "a") as myfile:
+                for tx in texts:
+                    print(tx.text+'\n')
+                    tt.append(tx.text)
+                    myfile.write(tx.text)
         except:
             texts=[' ']
-        tt=[]
-        with open("data/"+keyword+"_"+sub+".txt", "a") as myfile:
-            for tx in texts:
-                print(tx.text+'\n')
-                tt.append(tx.text)
-                myfile.write(tx.text)
-

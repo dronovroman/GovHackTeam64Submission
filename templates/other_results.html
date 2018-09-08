@@ -1,0 +1,213 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // [START script_body]
+      google.charts.load('current', {
+        'packages':['geochart', 'corechart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+
+
+
+
+      function drawRegionsMap() {
+        var data_m = google.visualization.arrayToDataTable([
+      ['Province', 'Popularity', 'Porcentage'],
+      ['Victoria', 700, 50],
+      ['New South Wales', 300, 30],
+      ['AU-ACT', 1000, 30],
+      ['Western Australia', 800, 30],
+      ['AU-TAS', 200, 30],
+      ['Queensland', 900, 30],
+      ['South Australia', 100, 30],
+      ['Northern Territory', 1000, 30]
+        ]);
+
+        var options_m = {
+      region: 'AU',
+      displayMode: 'regions',
+      colorAxis: {colors: ['grey', 'Green']},
+      datalessRegionColor: 'FF6600',
+      resolution: 'provinces'
+	};
+
+        var chart_m = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart_m.draw(data_m, options_m);
+
+            function selectHandler() {
+                var selectedItem = chart_m.getSelection()[0];
+                if (selectedItem) {
+                    var s_item = data_m.getValue(selectedItem.row, 0);
+                   // alert('The user selected ' + topping);
+                    if (s_item == 'South Australia') {
+                        GermanyChart();
+                    }
+                    
+
+                }
+            }
+
+            google.visualization.events.addListener(chart_m, 'select', selectHandler);
+//            chart_m.draw(data_m, options_m);
+
+      }
+      // [END script_body]
+    </script>
+
+    <script type="text/javascript">
+
+        // Load the Visualization API and the piechart package. 
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        // Set a callback to run when the Google Visualization API is loaded. 
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Callback that creates and populates a data table,  
+        // instantiates the pie chart, passes in the data and 
+        // draws it. 
+
+        function GermanyChart() {
+            var data = google.visualization.arrayToDataTable([
+           ['Category', 'Quantity', 'Expenses'],
+           ['Tanks', 1050, 400],
+           ['Planes', 3434, 234],
+           ['Cars', 4545, 334],
+           ['Rockets', 1030, 540]
+            ]);
+
+            var options = {
+                title: 'SA Chart',
+                vAxis: { title: 'Items', titleTextStyle: { color: 'red' } }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('subchart_div'));
+            chart.draw(data, options);
+        }
+
+
+
+        function FruitChart() {
+            var data = google.visualization.arrayToDataTable([
+           ['Category', 'Quantity', 'Expenses', {role: 'style'}],
+           ['Apple', 1000, 400,'red'],
+           ['Grape', 1170, 460,'green'],
+           ['Banana', 660, 1120,'yellow'],
+           ['Mango', 1030, 540,'orange']
+            ]);
+
+            var options = {
+                title: 'Fruits Chart',
+                vAxis: { title: 'Items', titleTextStyle: { color: 'red' } }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('subchart_div'));
+            chart.draw(data, options);
+	}
+
+
+        function VegChart() {
+            var data = google.visualization.arrayToDataTable([
+           ['Category', 'Quantity', 'Expenses'],
+           ['Potato', 1050, 400],
+           ['Tomato', 3434, 234],
+           ['Brinjal', 4545, 334],
+           ['Carrot', 1030, 540]
+            ]);
+
+            var options = {
+                title: 'Vegetables Chart',
+                vAxis: { title: 'Items', titleTextStyle: { color: 'red' } }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('subchart_div'));
+            chart.draw(data, options);
+        }
+
+        function SpiceChart() {
+            var data = google.visualization.arrayToDataTable([
+           ['Category', 'Quantity', 'Expenses', {role: 'style'}],
+           ['Garlic', 1000, 400,'red'],
+           ['Pepper', 1170, 460,'green'],
+           ['Salt', 660, 1120,'yellow']
+            ]);
+
+            var options = {
+                title: 'Spices Chart',
+                vAxis: { title: 'Items', titleTextStyle: { color: 'red' } }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('subchart_div'));
+            chart.draw(data, options);
+
+        }
+
+       
+        function drawChart() {
+
+            // Create the data table. 
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            data.addRows([
+              ['Vegetables', 20],
+              ['Fruits', 20],
+              ['Spices', 3]
+            ]);
+
+            // Set chart options 
+            var options = {
+                'title': 'My Food',
+                'width': 400,
+                'height': 400
+            };
+
+            // Instantiate and draw our chart, passing in some options. 
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+
+            function selectHandler() {
+                var selectedItem = chart.getSelection()[0];
+                if (selectedItem) {
+                    var s_item = data.getValue(selectedItem.row, 0);
+                   // alert('The user selected ' + topping);
+                    if (s_item == 'Vegetables')
+                    {
+                        VegChart();
+                    }
+                    if (s_item == 'Fruits') {
+                        FruitChart();
+                    }
+
+                    if (s_item == 'Spices') {
+                        SpiceChart();
+                    }
+                    
+
+                }
+            }
+
+            google.visualization.events.addListener(chart, 'select', selectHandler);
+            chart.draw(data, options);
+        }
+
+
+
+    </script> 
+
+
+  </head>
+  <body>
+    <!-- [START html_body] -->
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+    <!-- [END html_body] -->
+    <div id="chart_div" style="width:400; height:400"></div> 
+     <!-- Div that will hold the Sub-Charts-->
+    <div id="subchart_div" style="width: 400; height: 400;"></div>
+
+  </body>
+</html>
