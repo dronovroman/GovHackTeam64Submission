@@ -30,25 +30,140 @@ def start_job():
     #query keyword is passed here from the landing page
     key_word = request.form["keyw"]
     key_word=key_word.lower()
-    tweeter_string = """
-    Cancer, hurricanes, the plague, Hitler, Pol Pot, poverty, floods, bushfires, etc. etc. The irrationality is astounding. If praying to God will stop the drought, then by extension, God is causing the drought at the moment and is just waiting for us to ask him to make it rain.Finding that most blood cancer specialists viewed #Palliativecare as just end of life care or hospice - need to build understanding of value as an additional specialty that can support treatment - #integration #communication #ANZSPM18 #hematology #palloncSteve Jobs' last words ...
 
-He died a billionaire at 56 y.o. of Pancreatic Cancer and here are his last words on the sick bed:
-
- "I reached the pinnacle of success in the business world. In others’ eyes my life... https://www.facebook.com/124200931526612/posts/279363536010350/ …If this is what it takes to reduce skin cancer rates, and might help mitigate climate change, then really I'm fine with this. https://twitter.com/GuardianAus/status/1038019730324348929 …Distant shores shimmer on the edge of your consciousness. Loca... More for Cancer http://bit.ly/yk3b9m Life on mars? Cure for cancer? Pigs can fly? No, no it is something much more earth shattering I just know it.So full story, had a bit of a cancer scare. We're pretty sure I'm all good, but yeah. I let a few close friends know, mostly just to keep people posted, but also so I wasn't bottling like I tend to do.Discussing the Fear of Cancer Recurrence and Uncertain Prognosis, we have Leah Jane Curran, @drbelindathewes, and Louise Sharpe #ANZSPM18Consumer story: Georgia and breast implant associated cancer https://ift.tt/2oMVfMY Applying the evidence for exercise in #cancer care to #palliativecare with @drbobbycheema #ANZSPM18pic.twitter.com/swJEE0BtzGSomeone near and dear to you is having a change of heart. Thei... More for Cancer http://bit.ly/yk3b9m #Palliative medicine has something really valuable to add to cancer care and especially blood cancer care - @tomleblancMD #ANZSPM18#dyk in 2016 a joint panel from the WHO and the Food and Agriculture Organization of the UN issued a review of glyphosate and concluded it poses no cancer risks when consumed in food? #knowthefacts #factoverfiction
-important to let go by without amplification. Complacency is like a cancer. https://twitter.com/profpcdoherty/status/1037461109916065792 …Very concerning when @RACGP lends it's credibility to courses presented by folks claiming to heal cancers with hypnosis - perhaps it is the quantum physics they combine with the hypnosis doing the trick pic.twitter.com/BMvRKlLteCProfessor Jim Pratley told Open House the chemical is safe when used correctly and that banning glyphosate would severely impact world food supply. #glyphosate #GlyphosateAwarenesshttps://hope1032.com.au/stories/open-house/2018/is-a-us-court-decision-linking-weedkiller-and-cancer-fake-news/ …Case study from Power of the #Humanities - 'Enlisting #Shakespeare to help fight cancer' - what #linguistics and bio-informatics have achieved through a remarkable cross-disciplinary collaboration.NOW OPEN! On Sunday 28 October, come and join participants across Australia in the Australian Indoor Rowing Challenge and raise funds for the Cancer Council.#AIRC2018 @Concept2_AU @_776BCpic.twitter.com/IAn1qb8sZenot unusual for respectable rural women to provide green butter and related brownies to friends with cancer https://twitter.com/merryboffin/status/1036772340087095296 …Tweeps, if you are an international leader in medical research (Immunology, Genetics, Cancer, Neuroscience...) & wish to be my boss, please consider applying for Director of @JCSMR at @ourANU highly reputable institute with excellent researchers, 
-Yet another study highlighting the importance of metabolism in cancer. Known for a long time but forgotten by the Genomics folks. https://twitter.com/auscancercomp/status/1037949218575601664 …can cancer leave my family the fuck alone pleaseAIDS or cancer? #NRLStormSouths#headandneckcancer 5+YR-survival increased 52.5-64.5% from 1970/1977-2007/2013. Why are some #cancer types going backwards? https://twitter.com/thelancetoncol/status/1035418201193164802 …'Big data' says you're a cancer risk. Do you want your insurer to know? Do you want to know? http://www.abc.net.au/news/science/2018-09-01/health-data-growth-has-privacy-legal-implications/10156396 …OPINION: AS a newspaper editor, I knew Rudd very well. It’s time to inject some truth into his recent statements about media, and remind him of the things he did to destroy Labor, writes @penbo.http://bit.ly/2PVmn90 When I was in bed for 10 months with cancer, I was literally begging friends to bring me food. I was starving.
-
-99% of people wouldn't do it. Everyone was "too busy". I ended up in acute care at RNS Hospital. I almost died.
-
-I can't let it go, I'm still really bitter about it.Yesterday my best friend of 31 years and a fellow SW passed. It’s left a huge hole in my life. She lived 4 doors down from me, so I saw her a few times a day. She still worked up to the age of 80 with her regs of 50 years! RIP #Cancer #maturesexwork #regularclientsLearning about what #Genomics can teach us about #cancer #APOS18 @GarvanInstitutepic.twitter.com/MA5WkgCzMnSigns Of Colon Cancers That You Have Been Ignoring For Years And What You Can Do http://bit.ly/2M8e9Hj Is videoconferencing a good option for doing psych assessments w #AYA #cancer #patients in busy clinical settings? A: Yes! Feasible + no impact on pt/clinician comfort discussing tricky psych topics  thanks to funders @thekca! https://www.researchprotocols.org/2018/8/e168/   @EHEALTH_PSYONCOpic.twitter.com/yBVFw8zi1kPAPER OUT!!! "#Radiation, #Inflammation and the #ImmuneResponse in #Cancer" with @ALHudson2017 on behalf of @BillWalshLab @SydneyNeuroOnc @Sydney_Vital @MarkHughesFdn. Paper at: https://www.ncbi.nlm.nih.gov/pubmed/30178305 pic.twitter.com/N3NnqMUTNqBrilliant talk by Prof Haber on the Zero Childhood Cancer Program and its success at #APOS18 #ChildhoodCancerAwarenessMonth #ChildhoodCancerWe’re underway for #APOS18 @GarvanInstitute. Welcomes by @ProfDMThomas and @GregHuntMP & @Dr_R_Kurzrock has begun her plenary about Precision Cancer Medicine: past, present, future. A great start to an amazing lineup of precision oncology expertise for talks, panels & workshops. pic.twitter.com/yqrQ2XJxkKTo use targeted cancer therapy need to identify the right biomarker for the right patient at the right time @Dr_R_Kurzrock #APOS18 @GarvanInstitutepic.twitter.com/EbZcApBjFFThrilled to be at the Australian Precision Oncology Symposium today at the @GarvanInstitute and looking forward to a fantastic program! #APOS18 #PrecisionMedicine #Genomics #Cancer #clinicaltrialspic.twitter.com/BAbEhXXeOSTargeting Cancer Julie's Story- The Making of the Immobilisation Mask https://youtu.be/5MgidyDEabs  via @YouTube @CCNewSouthWales @throatsurgeon @TargetingCancer @beyondfiveorg @hagsie @HeadNeckNZ @swallowsgroup @CNSA_ORG @SpeechPathAus @JuliaMaclean @FacRadOncology @sasanofpic.twitter.com/i0LBNaLkrzTom LeBlanc speaking about the involvement (or lack of!) palliative care in haematological cancers: “Change is coming, and probably faster than you think” Great session. #ANZSPM18pic.twitter.com/dNrr9il46cKeeping the #TargetingCancer flag flying high over the Vasco De Gama Bridge in beautiful Lisbon! @lucindamorris23 @sandraturner49pic.twitter.com/eX9PXpLcJ4Smart phones, smart homes, smart offices, smart cars... The cumulative radioactive bombardment from so many smart devices makes one thing very clear: smart is the new dumb.
-
-#Cancer #Radiation #Fertility #Pregnancy #SmartMeters #EHS #EMF #Health #Parenting #5G
-    """
+#tweeter text analytics based on pre-scraped twees (due to delay in considaration of our twitter API application)
+    #SA
+    relevant_tweets_adelaide=''
+    t_adelaide=0
+    with open("tweeter/Adelaide.txt") as openfile:
+        for line in openfile:
+            for part in line.split():
+                if key_word in part:
+                    print (line)
+                    relevant_tweets_adelaide += line
+                    t_adelaide+=1
+                    
+    # Syd
+    relevant_tweets_sydney=''
+    t_sydney=0
+    with open("tweeter/Sydney.txt") as openfile:
+        for line in openfile:
+            for part in line.split():
+                if key_word in part:
+                    print (line)
+                    relevant_tweets_sydney += line
+                    t_sydney+=1
+                    
+                    
+    # Melbs                
+    relevant_tweets_melbourne=''
+    t_melbourne=0
+    with open("tweeter/Melbourne.txt") as openfile:
+        for line in openfile:
+            for part in line.split():
+                if key_word in part:
+                    print (line)
+                    relevant_tweets_melbourne += line
+                    t_melbourne+=1
+    
+    # Brisbane                
+    relevant_tweets_brisvegas=''
+    t_brisvegas=0
+    with open("tweeter/Brisbane.txt") as openfile:
+        for line in openfile:
+            for part in line.split():
+                if key_word in part:
+                    print (line)
+                    relevant_tweets_brisvegas += line
+                    t_brisvegas+=1
+                    
+    # Darwin                
+    relevant_tweets_darwin=''
+    t_darwin=0
+    with open("tweeter/Darwin.txt") as openfile:
+        for line in openfile:
+            for part in line.split():
+                if key_word in part:
+                    print (line)
+                    relevant_tweets_darwin += line                
+                    t_darwin+=1
+                    
+    
+    # Hobart                
+    relevant_tweets_hobart=''
+    t_hobart=0
+    with open("tweeter/Hobart.txt") as openfile:
+        for line in openfile:
+            for part in line.split():
+                if key_word in part:
+                    print (line)
+                    relevant_tweets_hobart += line                
+                    t_hobart+=1
+                    
+    
+    
+    # Perth                
+    relevant_tweets_perth=''
+    t_perth=0
+    with open("tweeter/Perth.txt") as openfile:
+        for line in openfile:
+            for part in line.split():
+                if key_word in part:
+                    print (line)
+                    relevant_tweets_perth += line                
+                    t_perth+=1
+    
+    
+    # Canberra             
+    relevant_tweets_canberra=''
+    t_canberra=0
+    with open("tweeter/Canberra.txt") as openfile:
+        for line in openfile:
+            for part in line.split():
+                if key_word in part:
+                    print (line)
+                    relevant_tweets_canberra += line    
+                    t_canberra+=1
+    
+    
+    
+    all_tweets=relevant_tweets_adelaide + relevant_tweets_brisvegas + relevant_tweets_canberra + relevant_tweets_darwin + relevant_tweets_hobart + relevant_tweets_melbourne + relevant_tweets_perth +relevant_tweets_sydney
+    print(len(all_tweets))      
+    
+    tweeter_string= all_tweets
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     big_goog_string=''
     bd=[]
-    cl=[]    
+    cl=[]   
+    g_adelaide=0;
+    g_brisvegas=0
+    g_canberra=0
+    g_darwin=0
+    g_hobart=0
+    g_melbourne=0
+    g_perth=0
+    g_sydney=0
+    
     for city in CAPITALS:
         gn_path="https://newsapi.org/v2/everything?q=" +key_word+"&q="+ city + "&sources=google-news-au&apiKey="+gn_key
         request1 = urllib.request.Request(gn_path)
@@ -56,14 +171,61 @@ I can't let it go, I'm still really bitter about it.Yesterday my best friend of 
         j = json.loads(re.search(r'{.*}',response.read().decode('utf-8')).group())
         bd.append(j)
         cl.append(city)
-    for j in bd:
-        for item in j['articles']:
-            print(item['title']+'\n')
-            big_goog_string +=item['title']
+        for j in bd:
+            for item in j['articles']:
+                #print(item['title']+'\n')
+                big_goog_string +=item['title']
+                if key_word in item['title']:
+                    if city== 'Adelaide':
+                        g_adelaide +=1;
+                    if city== 'Darwin':
+                        g_darwin +=1;
+                    if city== 'Brisbane':
+                        g_brisvegas +=1;
+                    if city== 'Canberra':
+                        g_canberra +=1;
+                    if city== 'Hobart':
+                        g_hobart +=1;
+                    if city== 'Melbourne':
+                        g_melbourne +=1;
+                    if city== 'Perth':
+                        g_perth +=1;
+                    if city== 'Sydney':
+                        g_sydney +=1;
+                
+    
     tweeter_string = tweeter_string.replace("\r"," ").replace("\n"," ").lower()
+    if len(tweeter_string)>1000:
+        tweeter_string=tweeter_string[0:10000]        
     google_string = big_goog_string.replace("\r"," ").replace("\n"," ").lower()
-    print(key_word)
-    return render_template('results.html', tweeter_feed = tweeter_string, key_wd = key_word, google_feed = google_string)
+    if len(google_string)>1000:
+        google_string=tweeter_string[0:10000] 
+    #print(key_word)
+    
+    
+    print('Tweeter statististics by state: ', t_adelaide, t_brisvegas, t_canberra, t_darwin, t_hobart, t_melbourne, t_perth, t_sydney)
+    print('Google news statististics by state: ', g_adelaide, g_brisvegas, g_canberra, g_darwin, g_hobart, g_melbourne, g_perth, g_sydney)    
+    #now we have general stats for tweets and news for each state
+    vic_t = t_melbourne
+    nsw_t = t_sydney
+    act_t = t_canberra
+    wa_t = t_perth
+    tas_t = t_perth
+    qld_t = t_brisvegas
+    sa_t = t_adelaide
+    nt_t = t_darwin
+    
+    vic_g = g_melbourne
+    nsw_g = g_sydney
+    act_g = g_canberra
+    wa_g = g_perth
+    tas_g = g_perth
+    qld_g = g_brisvegas
+    sa_g = g_adelaide
+    nt_g = g_darwin 
+    
+    print(vic_t)
+    return render_template('results.html', tweeter_feed = tweeter_string, key_wd = key_word, google_feed = google_string, vic_t=vic_t, nsw_t=nsw_t,act_t=act_t, wa_t=wa_t, tas_t=tas_t,qld_t=qld_t, sa_t=sa_t, nt_t=nt_t, vic_g=vic_g, nsw_g=nsw_g, act_g=act_g, wa_g=wa_g, tas_g=tas_g, qld_g=qld_g, sa_g=sa_g, nt_g=nt_g )
 
 
 

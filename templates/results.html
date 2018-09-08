@@ -10,14 +10,7 @@
     <title>Search data the better way | Home</title>
     <style> textarea:hover, select:hover, input:hover, .input:focus { border-color: rgba(126, 239, 104, 0.8); background-color: rgba(233,236,239,0.8); box-shadow: 0 3px 3px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6); outline: 0 none; } </style>
     
-    
-    
-    
-    
-    
-    
-  
-    
+
     
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -60,7 +53,75 @@
         var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_google'));
         wordtree.draw(data_g, options_g);
       }
-    </script>
+
+    
+ <!-- GEO CHARTS AREA -->   
+
+       google.charts.load('current', {
+        'packages':['geochart', 'corechart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+  function drawRegionsMap() {
+var data_m = google.visualization.arrayToDataTable([
+  ['State/Territory', 'Tweeter', 'News'],
+  ['Victoria', {{vic_t}}, {{vic_g}}],
+  ['New South Wales', {{nsw_t}}, {{nsw_g}}],
+  ['AU-ACT', {{act_t}}, {{act_g}}],
+  ['Western Australia', {{wa_t}}, {{wa_g}}],
+  ['AU-TAS', {{sa_t}}, {{sa_g}}],
+  ['Queensland', {{qld_t}}, {{qld_g}}],
+  ['South Australia', {{sa_t}}, {{sa_g}}],
+  ['Northern Territory', {{nt_t}}, {{nt_g}}]
+]);
+
+
+    
+        var options_m = {
+      region: 'AU',
+      displayMode: 'regions',
+      colorAxis: {colors: ['Gold', 'CornflowerBlue']},
+      datalessRegionColor: 'FF6600',
+      resolution: 'provinces'
+	};
+
+        var chart_m = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart_m.draw(data_m, options_m);
+        
+        function selectHandler() {
+                var selectedItem = chart_m.getSelection()[0];
+                if (selectedItem) {
+                    var s_item = data_m.getValue(selectedItem.row, 0);
+                   // alert('The user selected ' + topping);
+                    if (s_item == 'South Australia') {
+                        GermanyChart();
+                    }
+                    
+
+                }
+            }
+
+            google.visualization.events.addListener(chart_m, 'select', selectHandler);
+//            chart_m.draw(data_m, options_m);
+
+      }
+
+        
+</script>    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
   </head>
   <body>
 
@@ -70,7 +131,8 @@
     <div class="col col-lg-8">    
 <div class="jumbotron"> <!--Jumbotron start-->
   <h1 class="display-3"><span class=MsoNormal style='font-size:80.0pt;mso-bidi-font-size:11.0pt;
-  font-family:Mistral;mso-fareast-font-family:"Times New Roman"'>searchify.me<u1:p></u1:p></span><span
+  font-family:Mistral;mso-fareast-font-family:"Times New Roman"'><img src="{{url_for('static', filename='charcoal_and_aqua_square_computer_logo__2_.jpg')}}" class="img-rounded" class="img-thumbnail" alt="Cinque Terre" style="height:170px; width:auto;">
+  searchify.me<u1:p></u1:p></span><span
   style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span>
   </h1>
   <p>data search with context made easy...</p>
@@ -89,10 +151,21 @@
     <div id="wordtree_google" style="width: 600px; height: 400px;" class="col"></div>
   </div>
 </div>
+
+  
+   <div class="container">
+  <div class="row">
+    <div id="regions_div" style="width: 900px; height: 600px;" align="center" class="col">
+  
+    </div>
+    </div>
+  </div>
+</div>
+  
+  
   
   
   <div class="container">
-
   <div class="row">
     <div class="col">
       1 of 3
