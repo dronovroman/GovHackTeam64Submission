@@ -94,7 +94,7 @@ def start_job():
                 relevant_tweets_darwin += line                
                 t_darwin+=1
                 
-    
+
     # Hobart                
     relevant_tweets_hobart=''
     t_hobart=0
