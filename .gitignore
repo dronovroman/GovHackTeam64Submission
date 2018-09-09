@@ -2,3 +2,4 @@ twitter_authentication.py
 twitter_auth.py
 *.exe
 *.log
+*.pyc
